@@ -1,0 +1,38 @@
+Prompt Packaging Rules
+
+All prompts sent into Codex for ai.mine must be fully portable and self-contained.
+
+Do not rely on prior chat wording, shorthand labels, implied memory, or unstated reference meaning.
+
+Every implementation prompt must explicitly include:
+1. the correct project name: ai.mine
+2. the repository identity when relevant: asherlewis-uk/ai.mine
+3. the current task goal
+4. any locked scope assumptions needed for the task
+5. the reference authority rules if visual work is involved
+6. the output format or execution behavior expected
+
+For visual/UI prompts:
+- layout and flow references control structure, composition, and screen flow only
+- component/state references control styling language, materials, glow, borders, and active/inactive behavior only
+- layout references must not define theme
+- component references must not invent screens or navigation changes
+
+For state semantics:
+- teal-core always means idle, inactive, unselected, or default
+- spectral always means active, focused, selected, or engaged
+- spectral must be used selectively and meaningfully, not as a global decorative theme
+
+Prompt writing rules:
+- never use undefined shorthand like “batch 1,” “batch 2,” “the first images,” or “as discussed above” unless the meaning is fully restated in the current prompt
+- never assume Codex remembers previous turns unless the required context is included again
+- never leave naming ambiguous; always use ai.mine consistently
+- never let missing details be filled by vibes when they can be stated directly
+
+Execution rules:
+- inspect before editing
+- do not invent missing architecture, files, routes, or states
+- do not claim validation that was not run
+- prefer the narrowest grounded interpretation when ambiguity remains
+
+If a prompt cannot stand alone in a fresh Codex environment, it is not ready to send.
