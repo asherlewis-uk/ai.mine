@@ -1,0 +1,63 @@
+:root {
+  color-scheme: dark;
+
+  --font-sans-stack:
+    "Aptos",
+    "Segoe UI Variable",
+    "Segoe UI",
+    sans-serif;
+
+  --surface-base: oklch(17% 0.022 214);
+  --surface-glass: oklch(24% 0.025 214 / 0.72);
+  --surface-elevated: oklch(21% 0.024 214 / 0.84);
+
+  --border-idle: oklch(42% 0.045 200 / 0.4);
+  --border-active: oklch(76% 0.118 219 / 0.72);
+
+  --text-primary: oklch(95% 0.01 222);
+  --text-secondary: oklch(78% 0.018 222);
+  --text-tertiary: oklch(65% 0.018 222);
+
+  --state-teal-core: oklch(75% 0.11 195);
+  --state-spectral: oklch(77% 0.17 245);
+  --state-danger: oklch(69% 0.18 26);
+
+  --shadow-idle:
+    0 10px 28px rgb(0 0 0 / 0.24),
+    0 0 0 1px color-mix(in oklab, var(--state-teal-core) 10%, transparent);
+  --shadow-panel:
+    0 18px 45px rgb(0 0 0 / 0.34),
+    0 0 0 1px rgb(255 255 255 / 0.03);
+  --shadow-focus:
+    0 0 0 1px color-mix(in oklab, var(--state-teal-core) 48%, transparent),
+    0 0 24px color-mix(in oklab, var(--state-teal-core) 18%, transparent);
+  --shadow-active:
+    0 0 0 1px color-mix(in oklab, var(--state-spectral) 50%, transparent),
+    0 0 32px color-mix(in oklab, var(--state-spectral) 28%, transparent);
+  --shadow-danger:
+    0 0 0 1px color-mix(in oklab, var(--state-danger) 46%, transparent),
+    0 0 28px color-mix(in oklab, var(--state-danger) 18%, transparent);
+
+  --radius-control: 1rem;
+  --radius-card: 1.25rem;
+  --radius-panel: 1.5rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans-stack);
+
+  --color-surface-base: var(--surface-base);
+  --color-surface-glass: var(--surface-glass);
+  --color-surface-elevated: var(--surface-elevated);
+
+  --color-border-idle: var(--border-idle);
+  --color-border-active: var(--border-active);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-state-idle: var(--state-teal-core);
+  --color-state-active: var(--state-spectral);
+  --color-state-danger: var(--state-danger);
+}
